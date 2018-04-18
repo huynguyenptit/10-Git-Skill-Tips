@@ -85,7 +85,7 @@ Tuy nhiên, một câu lệnh ```git reflog``` hiển thị một commit (```b1b
 
 Nói chung, một cách thực hành tốt là tạo ra các commit theo tính năng, nghĩa là, mỗi commit phải đại cho cho 1 tính năng hoặc sửa lỗi. Giả sử điều gì sẽ xảy ra nếu bạn sửa 2 lỗi hoặc thêm nhiều tính năng mà không commit các thay đổi. Trong tinh huống này, bạn có thể đưa những thay đổi vào trong một commit. Nhưng có một cách tốt hơn: Xếp các tập tin riêng lẻ và commit chúng riêng biệt.
 
-Hãy nói rằng bạn đã tạo ra rất nhiều thay đổi đến một file và muốn cúng xuất hiện trong các commit riêng biệt. Trong trường hợp này, chúng ta sẽ thêm những file đó bằng tiền tố ```-p``` vào trong câu lệnh add.
+Giả sử rằng bạn đã tạo ra rất nhiều thay đổi đến một file và muốn cúng xuất hiện trong các commit riêng biệt. Trong trường hợp này, chúng ta sẽ thêm những file đó bằng tiền tố ```-p``` vào trong câu lệnh add.
 
 ```
 
