@@ -7,7 +7,7 @@ Lưu ý: Một vài câu lệnh trong bài viết bao gồm một phần của c
 
 ##1. Git Auto Completion
 
-Nếu bạn chạy các lệnh của Git thông qua "command line", nó thật mệt mỏi khi mà cứ phải nhập các câu lệnh bằng tay mỗi lần dùng. Để cải thiện việc này, bạn có thể bật auto comletion của các câu lệnh Git trong vòng vài phút.
+Nếu bạn chạy các lệnh của Git thông qua "command line", nó thật mệt mỏi khi mà cứ phải nhập các câu lệnh bằng tay mỗi lần dùng. Để cải thiện việc này, bạn có thể bật auto completion của các câu lệnh Git trong vòng vài phút.
 
 Để có được điểu này, chạy lệnh sau trong một hệ thống Unix:
 
