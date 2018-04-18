@@ -1,6 +1,6 @@
 #10 Lời khuyên để nâng kĩ năng về Git lên tầm cao mới
 
-Gần đây, chúng tôi vừa đưa ra một vào hướng dẫn giúp bạn làm quen vs Git cơ bản và sử dụng Git trong môi trường làm việc nhóm. Các lệnh mà chúng tôi đã bàn luận đã đủ để giúp một developer tồn tại trong thế giới của Git. Trong bài viết này, chúng tôi sẽ cố nghiên cứu xem làm cách nào để thời gian của bạn trở nên hiệu quả và tận dụng các tính năng mà Git cung cấp.
+Gần đây, chúng tôi vừa đưa ra một vài hướng dẫn giúp bạn làm quen với Git cơ bản và sử dụng Git trong môi trường làm việc nhóm. Các lệnh mà chúng tôi đã bàn luận đã đủ để giúp một developer tồn tại trong thế giới của Git. Trong bài viết này, chúng tôi sẽ cố nghiên cứu xem làm cách nào để quản lý thời gian hiệu quả và tận dụng các tính năng mà Git cung cấp.
 
 Lưu ý: Một vài câu lệnh trong bài viết bao gồm một phần của câu lệnh nằm trong dấu ngoặc vuông (ví dụ git add -p [filename]). Trong những ví dụ đó, bạn có thể chèn số, các định danh, v.v. mà không cần dấu ngoặc vuông.
 
@@ -24,7 +24,7 @@ if [ -f ~/.git-completion.bash ]; then
 fi
 ```
 
-Mặc dù tôi đã đề cập điều này trước đó, tôi vẫn không thể nhấn mạnh đủ: Nếu bạn muốn dùng tất cả các tính năng của Git, bạn nên chỉ định đổi chỗ cho giao diện command line!
+Mặc dù tôi đã đề cập điều này trước đó, tôi vẫn không thể nhấn mạnh đủ: Nếu bạn muốn dùng tất cả các tính năng của Git, bạn chắc chắn nên chuyển sang giao diện dòng lệnh (command)!
 
 ##2. Loại bỏ File trong Git
 
@@ -145,7 +145,7 @@ Sau đó bạn được yêu cầu cung cấp một thông báo về commit mớ
 
 ##8. Stash lại những thay đổi không được commit
 
-Hãy nói vs tôi rằng bạn đang làm sửa một lỗi nhất định hay làm một tính năng, và bạn đột nhiên được yêu cầu đưa ra công việc của bạn. Việc hiện tại của bạn chưa xong để được commit, và bạn không thể đưa ra trong giai đoạn này (mà không revert những thay đổi). Trong trường hợp này, ```git stash``` sẽ giải cứu bạn. Stash chủ yếu đưa tất cả những thay đổi của bạn và lưu trữ chúng cho trường hợp sử dụng sau này. Để stash những thay đổi của bạn, đơn giản bạn hãy chạy câu lệnh dưới đây.
+Hãy nói với tôi rằng bạn đang sửa một lỗi nhất định hay làm một tính năng, và bạn đột nhiên được yêu cầu đưa ra công việc của bạn. Việc hiện tại của bạn chưa xong để được commit, và bạn không thể đưa ra trong giai đoạn này (mà không revert những thay đổi). Trong trường hợp này, ```git stash``` sẽ giải cứu bạn. Stash chủ yếu đưa tất cả những thay đổi của bạn và lưu trữ chúng cho trường hợp sử dụng sau này. Để stash những thay đổi của bạn, đơn giản bạn hãy chạy câu lệnh dưới đây.
 
 ```
 
