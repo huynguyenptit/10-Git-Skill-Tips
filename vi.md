@@ -1,15 +1,15 @@
 #10 Lời khuyên để nâng kĩ năng về Git lên tầm cao mới
 
-Gần đây, chúng tôi vừa đưa ra một vào hướng dẫn giúp bạn làm quen vs Git cơ bản và sử dụng Git trong môi trường làm việc nhóm. Các lệnh mà chúng tôi đã bàn luận đã đủ để giúp một developer tồn tại trong thế giới của Git. Trong bài viết này, chúng tôi sẽ cố nghiên cứu xem làm cách nào để thời gian của bạn trở nên hiệu quả và tận dụng các tính năng mà Git cung cấp.
+Gần đây, chúng tôi vừa đưa ra một vài hướng dẫn giúp bạn làm quen với Git cơ bản và sử dụng Git trong môi trường làm việc nhóm. Các lệnh mà chúng tôi đã bàn luận đã đủ để giúp một developer tồn tại trong thế giới của Git. Trong bài viết này, chúng tôi sẽ cố nghiên cứu xem làm cách nào để quản lý thời gian hiệu quả và tận dụng các tính năng mà Git cung cấp.
 
 Lưu ý: Một vài câu lệnh trong bài viết bao gồm một phần của câu lệnh nằm trong dấu ngoặc vuông (ví dụ git add -p [filename]). Trong những ví dụ đó, bạn có thể chèn số, các định danh, v.v. mà không cần dấu ngoặc vuông.
 
 
-##1. Git Auto Completion
+##1. Tự động hoàn thành lệnh Git
 
-Nếu bạn chạy các lệnh của Git thông qua "command line", nó thật mệt mỏi khi mà cứ phải nhập các câu lệnh bằng tay mỗi lần dùng. Để cải thiện việc này, bạn có thể bật auto comletion của các câu lệnh Git trong vòng vài phút.
+Nếu bạn chạy các lệnh của Git thông qua "command line", nó thật mệt mỏi khi mà cứ phải nhập các câu lệnh bằng tay mỗi lần dùng. Để cải thiện việc này, bạn có thể bật tự động hoành thành của các câu lệnh Git trong vòng vài phút.
 
-Để có được điểu này, chạy lệnh sau trong một hệ thống Unix:
+Để có được script này, chạy lệnh sau trong một hệ thống Unix:
 
 ```
 cd ~
@@ -24,11 +24,11 @@ if [ -f ~/.git-completion.bash ]; then
 fi
 ```
 
-Mặc dù tôi đã đề cập điều này trước đó, tôi vẫn không thể nhấn mạnh đủ: Nếu bạn muốn dùng tất cả các tính năng của Git, bạn nên chỉ định đổi chỗ cho giao diện command line!
+Mặc dù tôi đã đề cập điều này trước đó, tôi vẫn không thể nhấn mạnh đủ: Nếu bạn muốn dùng tất cả các tính năng của Git, bạn chắc chắn nên chuyển sang giao diện dòng lệnh (command)!
 
 ##2. Loại bỏ File trong Git
 
-Bạn có cảm thấy mệt mỏi khi biên dịch các file (như ```.pyc```) xuất hiện trong kho Git của bạn? Hoặc bạn có chán đến mức khi bạn thêm chúng vào Git? Nhìn xa hơn, có một cách để bạn có thể bảo Git bỏ qua một số tập tin và thư mục hoàn toàn. Đơn giản là tạo một file vs tên là ```.gitignore``` và liệt kê các file hoặc thư mục bạn không muốn Git theo dõi. Bạn có thể tạo ra các ngoại lệ sử dụng dấu !.
+Bạn có cảm thấy mệt mỏi khi biên dịch các file (như ```.pyc```) xuất hiện trong kho Git của bạn? Hoặc bạn có chán đến mức khi bạn thêm chúng vào Git? Nhìn xa hơn, có một cách để bạn có thể bảo Git bỏ qua một số tập tin và thư mục hoàn toàn. Đơn giản là tạo một file tên là ```.gitignore``` và liệt kê các file hoặc thư mục bạn không muốn Git theo dõi. Bạn có thể tạo ra các ngoại lệ sử dụng dấu !.
 
 ```
 *.pyc
@@ -50,7 +50,7 @@ git blame [file_name]
 
 ![ahihi](https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2014/06/1402946443git-ninja-01.png)
 
-Và trong ảnh chụp màn hình bên dưới, bạn có thể thấy lệnh này sẽ trông như thế nào trên một kho lưu trữ lớn hơn:
+Và trong ảnh chụp màn hình bên dưới, bạn có thể thấy lệnh này sẽ trông như thế nào trên một repository lớn hơn:
 
 ![ahihi](https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2014/06/1402946441git-ninja-02.png)
 
@@ -71,9 +71,9 @@ Dưới đây là sự kết hợp giữa các tùy chọn:
 
 Hãy nói rằng bạn đã commit một thứ gì đó bạn không hề muốn và kết thúc bằng việc thiết lập lại những điều đó để trở về bước trước. Sau đó, bạn nhận ra bạn đã mất đi một số thông tin trong quá trình và bạn muốn lấy lại nó, hoặc ít nhất xem lại chúng. Đó là điều mà ```git reflog``` có thể giúp.
 
-Một câu lệnh ```git log``` đơn giản hiển thị commit cuối cùng, cha của chúng, hay cha của cha v.v. Tuy nhiên, ```git reflog``` lại là một danh sách các commit mà được chấm ở đầu. Nhớ rằng nó nằm trong hệ thống của bạn; nó không phải là một phần repo của bạn và cũng không được bao gồm trong danh sách push hoặc merge.
+Một câu lệnh ```git log``` đơn giản hiển thị commit cuối cùng, cha của chúng, hay cha của cha v.v. Tuy nhiên, ```git reflog``` lại là một danh sách các commit phần đầu đã được chỉ đến. Nhớ rằng nó nằm trong hệ thống của bạn; nó không phải là một phần repository của bạn và cũng không được bao gồm trong danh sách push hoặc merge.
 
-Nếu tôi chạy ```git log```, tôi sẽ lấy ra những commit mà chúng là một phần repo của tôi:
+Nếu tôi chạy ```git log```, tôi sẽ lấy ra những commit mà chúng là một phần repository của tôi:
 
 ![ahihi](https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2014/06/1402946446git-ninja-04.png)
 
@@ -114,11 +114,11 @@ Trong trường hợp của chúng tôi, tôi thực sự muốn chia chúng th�
 
 ![ahihi](https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2014/06/1402946452git-ninja-08.png)
 
-Nhưng bạn có thể thấy, chúng tôi đã thêm vào dòng 1 và dòng 3 và đã bỏ qua dòng 2. Bạn có thể xem trạng thái của repo và tạo ra một commit.
+Nhưng bạn có thể thấy, chúng tôi đã thêm vào dòng 1 và dòng 3 và đã bỏ qua dòng 2. Bạn có thể xem trạng thái của repository và tạo ra một commit.
 
 ![ahihi](https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2014/06/1402946454git-ninja-09.png)
 
-##7. Squash Multiple Commits
+##7. Squash nhiều commit
 
 Khi bạn gửi đi code để xem lại và tạo 1 pull request (Điều xảy ra thường xuyên trong một dự án mã nguồn mở), bạn có thể được hỏi cách để tạo ra một thay đổi trong code của bạn trước khi nó được chấp nhận. Bạn thực hiện thay đổi, chỉ để được yêu cầu thay đổi chúng trong những lần xem tiếp theo. Trước khi bạn biết nó, bạn có thêm vài commit. Lý tưởng nhất, bạn có thể sử dụng lệnh ```rebase```.
 
@@ -145,7 +145,7 @@ Sau đó bạn được yêu cầu cung cấp một thông báo về commit mớ
 
 ##8. Stash lại những thay đổi không được commit
 
-Hãy nói vs tôi rằng bạn đang làm sửa một lỗi nhất định hay làm một tính năng, và bạn đột nhiên được yêu cầu đưa ra công việc của bạn. Việc hiện tại của bạn chưa xong để được commit, và bạn không thể đưa ra trong giai đoạn này (mà không revert những thay đổi). Trong trường hợp này, ```git stash``` sẽ giải cứu bạn. Stash chủ yếu đưa tất cả những thay đổi của bạn và lưu trữ chúng cho trường hợp sử dụng sau này. Để stash những thay đổi của bạn, đơn giản bạn hãy chạy câu lệnh dưới đây.
+Hãy nói với tôi rằng bạn đang sửa một lỗi nhất định hay làm một tính năng, và bạn đột nhiên được yêu cầu đưa ra công việc của bạn. Việc hiện tại của bạn chưa xong để được commit, và bạn không thể đưa ra trong giai đoạn này (mà không revert những thay đổi). Trong trường hợp này, ```git stash``` sẽ giải cứu bạn. Stash chủ yếu đưa tất cả những thay đổi của bạn và lưu trữ chúng cho trường hợp sử dụng sau này. Để stash những thay đổi của bạn, đơn giản bạn hãy chạy câu lệnh dưới đây.
 
 ```
 
@@ -183,7 +183,7 @@ git stash apply stash@{2}
 
 ##9. Kiểm tra các commit đã thất lạc
 
-Mặc dù ```reflog``` là một cachs để kiểm tra các commit thất lạc, điều này là không khả thi đối vs các repo lớn. Trong khi câu lệnh ```fsck``` (Hệ thống kiếm tra file) có vẻ ổn.
+Mặc dù ```reflog``` là một cách để kiểm tra các commit thất lạc, điều này là không khả thi đối vs các repository lớn. Trong khi câu lệnh ```fsck``` (Hệ thống kiếm tra file) có vẻ ổn.
 
 ```
 
@@ -195,7 +195,7 @@ git fsck --lost-found
 
 Dưới đây bạn có thể xem các commit đã thất lạc. Bạn có thể kiểm tra những thay đổi của các commit bằng cách chạy lệnh ```git show [commit_hash]``` hoặc xem chúng bằng cách chạy ```git merge [commit_hash]```.
 
-```git fsck``` có một lợi thế so vs ```reflog```. Hãy nói rặng bạn đã xóa một remote branch và sau đó clone repo. Với ```fsck``` bạn có thể tìm kiếm và xem lại những remote branch đã xóa.
+```git fsck``` có một lợi thế so với ```reflog```. Hãy nói rằng bạn đã xóa một remote branch và sau đó clone repository. Với ```fsck``` bạn có thể tìm kiếm và xem lại những remote branch đã xóa.
 
 ##10. Cherry Pick (Vặt dâu)
 
@@ -221,7 +221,7 @@ Mặc dù chúng tôi đã có một clean ```cherry-pick``` trong trường h�
 
 ##Kết luận
 
-Với điều này, chúng ta sẽ đến phần kết của danh sách các lời khuyên mà tôi nghĩ sẽ giúp cải thiện kĩ năng về Git cho bạn. Git là một công cụ tốt nhất hiện có và có thể làm được bất kể thứ gì bạn tưởng tượng. Do đó hãy cố thử thách bản thân vs Git. Những cơ hội là đóm bạn sẽ học được rất nhiều thứ mới!!
+Với điều này, chúng ta sẽ đến phần kết của danh sách các lời khuyên mà tôi nghĩ sẽ giúp cải thiện kĩ năng về Git cho bạn. Git là một công cụ tốt nhất hiện có và có thể làm được bất kể thứ gì bạn tưởng tượng. Do đó hãy cố thử thách bản thân vs Git. Rất có thể bạn sẽ học được rất nhiều thứ mới!!
 
 
 
