@@ -7,7 +7,7 @@ Lưu ý: Một vài câu lệnh trong bài viết bao gồm một phần của c
 
 ##1. Git Auto Completion
 
-Nếu bạn chạy các lệnh của Git thông qua "command line", nó thật mệt mỏi khi mà cứ phải nhập các câu lệnh bằng tay mỗi lần dùng. Để cải thiện việc này, bạn có thể bật auto comletion của các câu lệnh Git trong vòng vài phút.
+Nếu bạn chạy các lệnh của Git thông qua "command line", nó thật mệt mỏi khi mà cứ phải nhập các câu lệnh bằng tay mỗi lần dùng. Để cải thiện việc này, bạn có thể bật auto completion của các câu lệnh Git trong vòng vài phút.
 
 Để có được điểu này, chạy lệnh sau trong một hệ thống Unix:
 
@@ -24,7 +24,7 @@ if [ -f ~/.git-completion.bash ]; then
 fi
 ```
 
-Mặc dù tôi đã đề cập điều này trước đó, tôi vẫn không thể nhấn mạnh đủ: Nếu bạn muốn dùng tất cả các tính năng của Git, bạn nên chỉ định đổi chỗ cho giao diện command line!
+Mặc dù tôi đã đề cập điều này trước đó, tôi vẫn không thể nhấn mạnh đủ: Nếu bạn muốn dùng tất cả các tính năng của Git, bạn nên chuyển sang sử dụng giao diện command line!
 
 ##2. Loại bỏ File trong Git
 
@@ -85,7 +85,7 @@ Tuy nhiên, một câu lệnh ```git reflog``` hiển thị một commit (```b1b
 
 Nói chung, một cách thực hành tốt là tạo ra các commit theo tính năng, nghĩa là, mỗi commit phải đại cho cho 1 tính năng hoặc sửa lỗi. Giả sử điều gì sẽ xảy ra nếu bạn sửa 2 lỗi hoặc thêm nhiều tính năng mà không commit các thay đổi. Trong tinh huống này, bạn có thể đưa những thay đổi vào trong một commit. Nhưng có một cách tốt hơn: Xếp các tập tin riêng lẻ và commit chúng riêng biệt.
 
-Hãy nói rằng bạn đã tạo ra rất nhiều thay đổi đến một file và muốn cúng xuất hiện trong các commit riêng biệt. Trong trường hợp này, chúng ta sẽ thêm những file đó bằng tiền tố ```-p``` vào trong câu lệnh add.
+Giả sử rằng bạn đã tạo ra rất nhiều thay đổi đến một file và muốn cúng xuất hiện trong các commit riêng biệt. Trong trường hợp này, chúng ta sẽ thêm những file đó bằng tiền tố ```-p``` vào trong câu lệnh add.
 
 ```
 
@@ -199,7 +199,7 @@ Dưới đây bạn có thể xem các commit đã thất lạc. Bạn có thể
 
 ##10. Cherry Pick (Vặt dâu)
 
-Tôi đã nhớ hầu hết các lệnh của Git cho đến tận giờ. Và lệnh ```cherry-pick``` là lệnh tôi yêu thích nhất, vì nghĩa đen cũng như những tiện ích của nó!
+Tôi đã để dành lệnh Git tinh tế nhất ở cuối. Và lệnh ```cherry-pick``` là lệnh tôi yêu thích nhất, vì nghĩa đen cũng như những tiện ích của nó!
 
 Trong giới hạn đơn giản nhất, ```cherry-pick``` đang chọn một commit từ một nhánh khác và merge chúng với nhánh hiện tại. Nếu bạn làm đang làm việc theo kiểu song song 2 nhánh hoặc nhiều hơn, bạn có thể nhận thấy một lỗi xảy ra trên các nhánh. Nếu bạn giải quyết chúng trong một nhánh, bạn có thể cherry pick commit đó vào một nhánh khác mà không cần động tới các file hoặc commit khác
 
